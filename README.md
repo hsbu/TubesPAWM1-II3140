@@ -4,7 +4,8 @@ A modern, interactive full-stack web application for learning calculus concepts 
 
 ## Group 12 II3140 K2
 ```
-In the loving memory of Muhammad Aidan Fathullah - 18223002, this project is developed and maintained by Muhamad Hasbullah Faris - 18223014
+In the loving memory of Muhammad Aidan Fathullah - 18223002,
+this project is developed and maintained by Muhamad Hasbullah Faris - 18223014
 ```
 
 ## Features
