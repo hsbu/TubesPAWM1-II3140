@@ -326,7 +326,7 @@ class APIClient {
   }
 
   async getDashboardStats(): Promise<APIResponse<DashboardStats>> {
-    return this.request('/api/user/dashboard-stats');
+    return this.request('/api/dashboard/stats');
   }
 
   async updateUserProgress(progressData: {
