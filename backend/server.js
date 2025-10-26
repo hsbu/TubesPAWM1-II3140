@@ -59,6 +59,31 @@ app.use('/api/', apiLimiter);
 app.use('/api/auth/signin', authLimiter);
 app.use('/api/auth/signup', authLimiter);
 
+app.get('/', (req, res) => {
+  res.json({
+    success: true,
+    message: 'Webculus API is running',
+    version: '1.0.0',
+    endpoints: {
+      auth: '/api/auth/*',
+      lessons: '/api/lessons',
+      practice: '/api/practice/*',
+      user: '/api/user/*',
+      dashboard: '/api/user/dashboard-stats'
+    },
+    docs: 'https://github.com/hsbu/TubesPAWM1-II3140'
+  });
+});
+
+// Health check endpoint
+app.get('/health', (req, res) => {
+  res.json({ 
+    success: true, 
+    status: 'healthy',
+    timestamp: new Date().toISOString()
+  });
+});
+
 // Supabase Clients
 const supabaseUrl = process.env.SUPABASE_URL;
 const supabaseKey = process.env.SUPABASE_ANON_KEY;
