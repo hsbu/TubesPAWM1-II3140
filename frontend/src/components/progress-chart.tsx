@@ -21,9 +21,10 @@ interface ProgressChartProps {
   data: Array<Record<string, any>>
   dataKey: string
   xAxisKey: string
+  xAxisFontSize?: number
 }
 
-export function ProgressChart({ type, title, description, data, dataKey, xAxisKey }: ProgressChartProps) {
+export function ProgressChart({ type, title, description, data, dataKey, xAxisKey, xAxisFontSize = 12 }: ProgressChartProps) {
   return (
     <Card className="border-border/50">
       <CardHeader>
@@ -35,7 +36,15 @@ export function ProgressChart({ type, title, description, data, dataKey, xAxisKe
           {type === "bar" ? (
             <BarChart data={data}>
               <CartesianGrid strokeDasharray="3 3" stroke="var(--border)" />
-              <XAxis dataKey={xAxisKey} stroke="var(--muted-foreground)" />
+              <XAxis 
+                dataKey={xAxisKey} 
+                stroke="var(--muted-foreground)" 
+                tick={{ fontSize: xAxisFontSize }}
+                interval={0}
+                angle={-45}
+                textAnchor="end"
+                height={80}
+              />
               <YAxis stroke="var(--muted-foreground)" />
               <Tooltip
                 contentStyle={{

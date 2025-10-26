@@ -121,6 +121,7 @@ export default function DashboardPage() {
                     data={dashboardData.lessonProgress}
                     dataKey="completed"
                     xAxisKey="name"
+                    xAxisFontSize={10}
                   />
                 ) : (
                   <Card className="border-border/50">
