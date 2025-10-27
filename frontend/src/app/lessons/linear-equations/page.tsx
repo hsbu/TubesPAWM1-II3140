@@ -49,7 +49,7 @@ function LinearEquationSimulation() {
   return (
     <Card className="w-full">
       <CardHeader>
-        <CardTitle>See it for yourself!</CardTitle>
+        <CardTitle>Try it for yourself!</CardTitle>
         <CardDescription>
           Adjust the slope (m) and y-intercept (b) to see how the equation y = mx + b changes
         </CardDescription>

@@ -92,7 +92,7 @@ function LinearInequalitySimulation() {
   return (
     <Card className="w-full">
       <CardHeader>
-        <CardTitle>Interactive Linear Inequality Simulator</CardTitle>
+        <CardTitle>Try it for yourself!</CardTitle>
         <CardDescription>
           Adjust the slope (m), y-intercept (b), and inequality type to see how the inequality y {getInequalitySymbol()} mx + b changes
         </CardDescription>
