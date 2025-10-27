@@ -55,12 +55,12 @@ export function Sidebar({ open, onOpenChange, onAuthClick }: SidebarProps) {
         )}
         aria-label="Main navigation"
       >
-        <header className="p-6 border-b border-sidebar-border">
+        <header className="p-6 border-b border-sidebar-border mt-14 md:mt-0">
           <h1 className="text-xl font-bold text-sidebar-foreground">Webculus</h1>
           <p className="text-xs text-sidebar-foreground/60 mt-1">Your web-based calculus friend!</p>
         </header>
 
-        <nav className="p-4 overflow-y-auto h-[calc(100vh-120px)]" aria-label="Primary navigation">
+        <nav className="p-4 overflow-y-auto h-[calc(100vh-176px)] md:h-[calc(100vh-120px)]" aria-label="Primary navigation">
           <div className="mb-2">
             <Link href="/">
               <Button

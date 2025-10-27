@@ -40,10 +40,6 @@ export function ProgressChart({ type, title, description, data, dataKey, xAxisKe
                 dataKey={xAxisKey} 
                 stroke="var(--muted-foreground)" 
                 tick={{ fontSize: xAxisFontSize }}
-                interval={0}
-                angle={-45}
-                textAnchor="end"
-                height={80}
               />
               <YAxis stroke="var(--muted-foreground)" />
               <Tooltip

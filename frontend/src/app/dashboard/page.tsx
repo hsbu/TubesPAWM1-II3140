@@ -79,7 +79,7 @@ export default function DashboardPage() {
       <Sidebar open={sidebarOpen} onOpenChange={setSidebarOpen} />
 
       <main className="flex-1 overflow-auto">
-        <div className="container mx-auto px-4 py-8 md:py-12">
+        <div className="container mx-auto px-4 py-8 md:py-12 mt-16 md:mt-0">
           <div className="mb-8">
             <h1 className="text-3xl md:text-4xl font-bold text-foreground mb-2">Your Dashboard</h1>
             <p className="text-lg text-muted-foreground">Track your learning progress and achievements</p>

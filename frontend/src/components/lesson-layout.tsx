@@ -62,7 +62,7 @@ export function LessonLayout({ children }: LessonLayoutProps) {
     <div className="flex h-screen bg-background">
       <Sidebar open={sidebarOpen} onOpenChange={setSidebarOpen} />
       <main className="flex-1 overflow-auto">
-        <div className="container mx-auto px-4 py-8 md:py-12 max-w-4xl">{children}</div>
+        <div className="container mx-auto px-4 py-8 md:py-12 max-w-4xl mt-16 md:mt-0">{children}</div>
       </main>
     </div>
   )
