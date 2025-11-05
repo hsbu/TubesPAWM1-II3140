@@ -965,9 +965,12 @@ app.post('/api/user/progress', authenticateUser, [
   }
 });
 
-// Start Server
-app.listen(PORT, () => {
-  console.log(`Calculus Academy API running on port ${PORT}`);
-  console.log(`Environment: ${process.env.NODE_ENV || 'development'}`);
-  console.log(`CORS enabled for: ${process.env.FRONTEND_URL || 'http://localhost:3000'}`);
-});
+if (process.env.NODE_ENV !== 'production' || !process.env.VERCEL) {
+  app.listen(PORT, () => {
+    console.log(`Calculus Academy API running on port ${PORT}`);
+    console.log(`Environment: ${process.env.NODE_ENV || 'development'}`);
+    console.log(`CORS enabled for: ${process.env.FRONTEND_URL || 'http://localhost:3000'}`);
+  });
+}
+
+module.exports = app;
