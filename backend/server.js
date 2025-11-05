@@ -43,13 +43,15 @@ app.use(cors({
     if (!origin) return callback(null, true);
     
     if (allowedOrigins.includes(origin)) {
+      console.log(`CORS allowed for origin: ${origin}`);
       callback(null, true);
     } else {
       console.warn(`Blocked CORS request from origin: ${origin}`);
+      console.warn(`Allowed origins:`, allowedOrigins);
       callback(new Error('Not allowed by CORS'));
     }
   },
-  credentials: true,
+  credentials: false,
   optionsSuccessStatus: 200,
   methods: ['GET', 'POST', 'PUT', 'DELETE', 'OPTIONS'],
   allowedHeaders: ['Content-Type', 'Authorization']

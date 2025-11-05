@@ -177,7 +177,9 @@ class APIClient {
       
       const response = await fetch(url, {
         ...options,
-        headers
+        headers,
+        credentials: 'omit', // Don't send cookies for CORS
+        mode: 'cors' // Explicit CORS mode
       });
 
       const contentType = response.headers.get('content-type');
@@ -186,7 +188,10 @@ class APIClient {
         status: response.status,
         statusText: response.statusText,
         contentType,
-        headers: Array.from(response.headers.entries())
+        corsHeaders: {
+          'access-control-allow-origin': response.headers.get('access-control-allow-origin'),
+          'access-control-allow-credentials': response.headers.get('access-control-allow-credentials')
+        }
       });
       
       if (!contentType || !contentType.includes('application/json')) {
