@@ -13,12 +13,10 @@ const allowedOrigins = [
   process.env.FRONTEND_URL,
   'http://localhost:3000',
   'http://127.0.0.1:3000',
-  // Mobile app development origins
   'http://localhost:8081',
   'http://127.0.0.1:8081',
   'http://localhost:19006',
   'http://127.0.0.1:19006',
-  // Expo Go app
   'exp://localhost:8081',
 ].filter(Boolean);
 
